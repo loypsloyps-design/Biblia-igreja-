@@ -21,17 +21,19 @@ const textoVersiculo = document.getElementById("textoVersiculo");
 
 
 // ==========================================
-// CARREGAR BÍBLIA.JSON
+// CARREGAR BIBLIOTECA.JSON
 // ==========================================
 
 async function carregarBiblia() {
 
     try {
 
-        const resposta = await fetch("./bíblia.json");
+        const resposta = await fetch("./biblioteca.json");
 
         if (!resposta.ok) {
-            throw new Error("Não foi possível carregar o arquivo bíblia.json");
+            throw new Error(
+                "Não foi possível carregar o arquivo biblioteca.json"
+            );
         }
 
         biblia = await resposta.json();
@@ -42,11 +44,15 @@ async function carregarBiblia() {
 
     } catch (erro) {
 
-        console.error("Erro ao carregar a Bíblia:", erro);
+        console.error(
+            "Erro ao carregar a Bíblia:",
+            erro
+        );
 
         alert(
             "Não foi possível carregar a Bíblia. " +
-            "Verifique se o arquivo bíblia.json está na pasta principal."
+            "Verifique se o arquivo biblioteca.json " +
+            "está na pasta principal do projeto."
         );
 
     }
@@ -75,7 +81,8 @@ livro.addEventListener("change", function () {
 
     // Procura o livro dentro do JSON
 
-    const livroBiblia = biblia[livroSelecionado];
+    const livroBiblia =
+        biblia[livroSelecionado];
 
     if (!livroBiblia) {
 
@@ -90,19 +97,22 @@ livro.addEventListener("change", function () {
 
     // Cria os capítulos existentes
 
-    Object.keys(livroBiblia).forEach(numeroCapitulo => {
+    Object.keys(livroBiblia).forEach(
+        numeroCapitulo => {
 
-        const opcao =
-            document.createElement("option");
+            const opcao =
+                document.createElement("option");
 
-        opcao.value = numeroCapitulo;
+            opcao.value =
+                numeroCapitulo;
 
-        opcao.textContent =
-            "Capítulo " + numeroCapitulo;
+            opcao.textContent =
+                "Capítulo " + numeroCapitulo;
 
-        capitulo.appendChild(opcao);
+            capitulo.appendChild(opcao);
 
-    });
+        }
+    );
 
 });
 
@@ -113,8 +123,11 @@ livro.addEventListener("change", function () {
 
 capitulo.addEventListener("change", function () {
 
-    const livroSelecionado = livro.value;
-    const capituloSelecionado = capitulo.value;
+    const livroSelecionado =
+        livro.value;
+
+    const capituloSelecionado =
+        capitulo.value;
 
 
     versiculo.innerHTML =
@@ -148,19 +161,22 @@ capitulo.addEventListener("change", function () {
     // Cria somente os versículos
     // que realmente existem no capítulo
 
-    Object.keys(capituloBiblia).forEach(numeroVersiculo => {
+    Object.keys(capituloBiblia).forEach(
+        numeroVersiculo => {
 
-        const opcao =
-            document.createElement("option");
+            const opcao =
+                document.createElement("option");
 
-        opcao.value = numeroVersiculo;
+            opcao.value =
+                numeroVersiculo;
 
-        opcao.textContent =
-            "Versículo " + numeroVersiculo;
+            opcao.textContent =
+                "Versículo " + numeroVersiculo;
 
-        versiculo.appendChild(opcao);
+            versiculo.appendChild(opcao);
 
-    });
+        }
+    );
 
 });
 
@@ -171,7 +187,8 @@ capitulo.addEventListener("change", function () {
 
 btnMostrar.addEventListener("click", function () {
 
-    const livroSelecionado = livro.value;
+    const livroSelecionado =
+        livro.value;
 
     const capituloSelecionado =
         capitulo.value;
