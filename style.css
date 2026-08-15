@@ -1,25 +1,42 @@
+/* ==========================================
+   RESET
+========================================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+/* ==========================================
+   BODY
+========================================== */
+
 body {
+
     font-family: Arial, Helvetica, sans-serif;
+
     min-height: 100vh;
 
     background:
-        radial-gradient(circle at top, #243b53 0%, #111827 45%, #080b10 100%);
+        radial-gradient(
+            circle at top,
+            #243b53 0%,
+            #111827 45%,
+            #080b10 100%
+        );
 
     color: #ffffff;
 }
 
 
-/* =========================
+/* ==========================================
    CABEÇALHO
-========================= */
+========================================== */
 
 .topo {
+
     min-height: 90px;
 
     display: flex;
@@ -27,18 +44,24 @@ body {
 
     padding: 20px 40px;
 
-    background: rgba(17, 24, 39, 0.92);
+    background:
+        rgba(17, 24, 39, 0.92);
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
 
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
+
 .logo {
+
     width: 58px;
     height: 58px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -50,15 +73,21 @@ body {
 
     font-size: 30px;
 
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
+
 .topo h1 {
+
     font-size: 25px;
+
     letter-spacing: 0.5px;
 }
 
+
 .topo p {
+
     margin-top: 5px;
 
     color: #aeb8c5;
@@ -67,34 +96,39 @@ body {
 }
 
 
-/* =========================
+/* ==========================================
    CONTAINER
-========================= */
+========================================== */
 
 .container {
+
     width: 92%;
+
     max-width: 1250px;
 
     margin: 45px auto;
 
     display: grid;
 
-    grid-template-columns: 350px 1fr;
+    grid-template-columns:
+        350px 1fr;
 
     gap: 30px;
 }
 
 
-/* =========================
+/* ==========================================
    PAINÉIS
-========================= */
+========================================== */
 
 .painel-controle,
 .painel-versiculo {
 
-    background: rgba(31, 41, 55, 0.88);
+    background:
+        rgba(31, 41, 55, 0.88);
 
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
 
     border-radius: 18px;
 
@@ -104,42 +138,37 @@ body {
     backdrop-filter: blur(10px);
 }
 
+
+/* ==========================================
+   PAINEL DE CONTROLE
+========================================== */
+
 .painel-controle {
+
     padding: 28px;
 }
 
-.painel-versiculo {
-    min-height: 560px;
-
-    padding: 45px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    align-items: center;
-
-    text-align: center;
-}
-
-
-/* =========================
-   CONTROLE
-========================= */
 
 .painel-controle h2 {
+
     margin-bottom: 28px;
 
     font-size: 21px;
 }
 
+
+/* ==========================================
+   CAMPOS
+========================================== */
+
 .campo {
+
     margin-bottom: 20px;
 }
 
+
 .campo label {
+
     display: block;
 
     margin-bottom: 8px;
@@ -151,6 +180,7 @@ body {
     font-weight: bold;
 }
 
+
 select {
 
     width: 100%;
@@ -159,7 +189,8 @@ select {
 
     border-radius: 10px;
 
-    border: 1px solid #4b5563;
+    border:
+        1px solid #4b5563;
 
     background: #111827;
 
@@ -174,22 +205,26 @@ select {
     transition: 0.2s;
 }
 
+
 select:focus {
+
     border-color: #d4af37;
 
-    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.15);
+    box-shadow:
+        0 0 0 2px
+        rgba(212, 175, 55, 0.15);
 }
 
 
-/* =========================
+/* ==========================================
    BOTÕES
-========================= */
+========================================== */
 
 button {
 
     width: 100%;
 
-    padding: 15px;
+    padding: 14px;
 
     border: none;
 
@@ -208,6 +243,7 @@ button {
     transition: 0.2s;
 }
 
+
 button:hover {
 
     transform: translateY(-2px);
@@ -216,9 +252,128 @@ button:hover {
 }
 
 
-/* =========================
-   ÁREA DO VERSÍCULO
-========================= */
+.grupo-botoes {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+/* ==========================================
+   BOTÃO SECUNDÁRIO
+========================================== */
+
+.btn-secundario {
+
+    background: #374151;
+
+    color: white;
+}
+
+
+.btn-secundario:hover {
+
+    background: #4b5563;
+}
+
+
+/* ==========================================
+   NAVEGAÇÃO
+========================================== */
+
+.navegacao {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+
+.btn-navegacao {
+
+    background: #1f2937;
+
+    border:
+        1px solid #4b5563;
+
+    color: #e5e7eb;
+
+    font-size: 13px;
+}
+
+
+.btn-navegacao:hover {
+
+    background: #374151;
+}
+
+
+/* ==========================================
+   ATALHOS
+========================================== */
+
+.atalhos {
+
+    margin-top: 22px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    color: #9ca3af;
+
+    font-size: 12px;
+}
+
+
+.atalhos strong {
+
+    color: #d4af37;
+
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   ÁREA DA BÍBLIA
+========================================== */
+
+.painel-versiculo {
+
+    min-height: 560px;
+
+    padding: 45px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* ==========================================
+   ÍCONE
+========================================== */
 
 .icone-biblia {
 
@@ -228,6 +383,11 @@ button:hover {
 
     opacity: 0.9;
 }
+
+
+/* ==========================================
+   REFERÊNCIA
+========================================== */
 
 .referencia {
 
@@ -241,6 +401,11 @@ button:hover {
 
     letter-spacing: 0.5px;
 }
+
+
+/* ==========================================
+   VERSÍCULO
+========================================== */
 
 .texto-versiculo {
 
@@ -256,9 +421,90 @@ button:hover {
 }
 
 
-/* =========================
+/* ==========================================
+   LISTA DE VERSÍCULOS
+========================================== */
+
+.lista-versiculos {
+
+    width: 100%;
+
+    max-width: 850px;
+
+    margin-top: 25px;
+
+    display: none;
+
+    text-align: left;
+}
+
+
+.lista-versiculos.ativo {
+
+    display: block;
+}
+
+
+.versiculo-item {
+
+    padding: 15px 18px;
+
+    margin-bottom: 8px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    color: #e5e7eb;
+
+    font-size: 20px;
+
+    line-height: 1.6;
+
+    transition: 0.2s;
+}
+
+
+.versiculo-item:hover {
+
+    background:
+        rgba(255, 255, 255, 0.06);
+}
+
+
+.versiculo-item.selecionado {
+
+    background:
+        rgba(212, 175, 55, 0.12);
+
+    border-left:
+        4px solid #d4af37;
+}
+
+
+.numero-versiculo {
+
+    color: #d4af37;
+
+    font-weight: bold;
+
+    margin-right: 8px;
+}
+
+
+/* ==========================================
    BOTÃO PROJETAR
-========================= */
+========================================== */
+
+.controles-leitura {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+}
+
 
 .btn-projetar {
 
@@ -271,15 +517,106 @@ button:hover {
     color: white;
 }
 
+
 .btn-projetar:hover {
 
     background: #1d4ed8;
 }
 
 
-/* =========================
+/* ==========================================
+   MODO TELÃO
+========================================== */
+
+body.modo-telao {
+
+    overflow: hidden;
+
+    background: #000;
+}
+
+
+body.modo-telao .topo,
+body.modo-telao .painel-controle,
+body.modo-telao footer {
+
+    display: none;
+}
+
+
+body.modo-telao .container {
+
+    width: 100%;
+
+    max-width: none;
+
+    height: 100vh;
+
+    margin: 0;
+
+    display: block;
+}
+
+
+body.modo-telao .painel-versiculo {
+
+    width: 100%;
+
+    height: 100vh;
+
+    min-height: 100vh;
+
+    border: none;
+
+    border-radius: 0;
+
+    background: #000;
+
+    padding: 60px;
+}
+
+
+body.modo-telao .icone-biblia {
+
+    display: none;
+}
+
+
+body.modo-telao .referencia {
+
+    font-size: 48px;
+
+    margin-bottom: 35px;
+}
+
+
+body.modo-telao .texto-versiculo {
+
+    max-width: 1500px;
+
+    font-size: 52px;
+
+    line-height: 1.55;
+
+    font-weight: 500;
+}
+
+
+body.modo-telao .lista-versiculos {
+
+    display: none !important;
+}
+
+
+body.modo-telao .controles-leitura {
+
+    display: none;
+}
+
+
+/* ==========================================
    RODAPÉ
-========================= */
+========================================== */
 
 footer {
 
@@ -293,17 +630,17 @@ footer {
 }
 
 
-/* =========================
-   CELULAR / TELAS PEQUENAS
-========================= */
+/* ==========================================
+   TABLET
+========================================== */
 
 @media (max-width: 850px) {
 
     .container {
 
         grid-template-columns: 1fr;
-
     }
+
 
     .painel-versiculo {
 
@@ -312,73 +649,77 @@ footer {
         padding: 30px;
     }
 
+
     .texto-versiculo {
 
         font-size: 22px;
-
     }
-
 }
 
 
-/* =========================
+/* ==========================================
    CELULAR
-========================= */
+========================================== */
 
 @media (max-width: 500px) {
 
     .topo {
 
         padding: 18px 20px;
-
     }
+
 
     .topo h1 {
 
         font-size: 20px;
-
     }
+
 
     .logo {
 
         width: 50px;
+
         height: 50px;
 
         font-size: 25px;
-
     }
+
 
     .container {
 
         width: 94%;
 
         margin: 25px auto;
-
     }
+
 
     .painel-controle,
     .painel-versiculo {
 
         border-radius: 14px;
-
     }
+
 
     .painel-versiculo {
 
         padding: 25px;
-
     }
+
 
     .referencia {
 
         font-size: 27px;
-
     }
+
 
     .texto-versiculo {
 
         font-size: 20px;
-
     }
 
+
+    .versiculo-item {
+
+        font-size: 17px;
+    }
 }
