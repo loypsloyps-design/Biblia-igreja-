@@ -32,14 +32,13 @@ async function carregarBiblia() {
 
         if (!resposta.ok) {
             throw new Error(
-                "Não foi possível carregar o arquivo biblioteca.json"
+                "Não foi possível carregar o arquivo biblia.json"
             );
         }
 
         biblia = await resposta.json();
 
         console.log("Bíblia carregada com sucesso!");
-
         console.log(biblia);
 
     } catch (erro) {
@@ -51,12 +50,10 @@ async function carregarBiblia() {
 
         alert(
             "Não foi possível carregar a Bíblia. " +
-            "Verifique se o arquivo biblioteca.json " +
+            "Verifique se o arquivo biblia.json " +
             "está na pasta principal do projeto."
         );
-
     }
-
 }
 
 
