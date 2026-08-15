@@ -12,7 +12,10 @@
 
 <body>
 
-    <!-- CABEÇALHO -->
+    <!-- =========================
+         CABEÇALHO
+    ========================== -->
+
     <header class="topo">
 
         <div class="logo">
@@ -27,13 +30,23 @@
     </header>
 
 
-    <!-- CONTEÚDO PRINCIPAL -->
+    <!-- =========================
+         CONTEÚDO
+    ========================== -->
+
     <main class="container">
 
-        <!-- PAINEL DE CONTROLE -->
+
+        <!-- =========================
+             PAINEL DE CONTROLE
+        ========================== -->
+
         <section class="painel-controle">
 
             <h2>Localizar passagem</h2>
+
+
+            <!-- LIVRO -->
 
             <div class="campo">
 
@@ -47,93 +60,12 @@
                         Selecione um livro
                     </option>
 
-                    <option>Gênesis</option>
-                    <option>Êxodo</option>
-                    <option>Levítico</option>
-                    <option>Números</option>
-                    <option>Deuteronômio</option>
-
-                    <option>Josué</option>
-                    <option>Juízes</option>
-                    <option>Rute</option>
-
-                    <option>1 Samuel</option>
-                    <option>2 Samuel</option>
-
-                    <option>1 Reis</option>
-                    <option>2 Reis</option>
-
-                    <option>1 Crônicas</option>
-                    <option>2 Crônicas</option>
-
-                    <option>Esdras</option>
-                    <option>Neemias</option>
-                    <option>Ester</option>
-                    <option>Jó</option>
-                    <option>Salmos</option>
-                    <option>Provérbios</option>
-                    <option>Eclesiastes</option>
-                    <option>Cânticos</option>
-
-                    <option>Isaías</option>
-                    <option>Jeremias</option>
-                    <option>Lamentações</option>
-                    <option>Ezequiel</option>
-                    <option>Daniel</option>
-
-                    <option>Oséias</option>
-                    <option>Joel</option>
-                    <option>Amós</option>
-                    <option>Obadias</option>
-                    <option>Jonas</option>
-                    <option>Miquéias</option>
-                    <option>Naum</option>
-                    <option>Habacuque</option>
-                    <option>Sofonias</option>
-                    <option>Ageu</option>
-                    <option>Zacarias</option>
-                    <option>Malaquias</option>
-
-                    <option>Mateus</option>
-                    <option>Marcos</option>
-                    <option>Lucas</option>
-                    <option>João</option>
-                    <option>Atos</option>
-                    <option>Romanos</option>
-
-                    <option>1 Coríntios</option>
-                    <option>2 Coríntios</option>
-
-                    <option>Gálatas</option>
-                    <option>Efésios</option>
-                    <option>Filipenses</option>
-                    <option>Colossenses</option>
-
-                    <option>1 Tessalonicenses</option>
-                    <option>2 Tessalonicenses</option>
-
-                    <option>1 Timóteo</option>
-                    <option>2 Timóteo</option>
-
-                    <option>Tito</option>
-                    <option>Filemom</option>
-                    <option>Hebreus</option>
-                    <option>Tiago</option>
-
-                    <option>1 Pedro</option>
-                    <option>2 Pedro</option>
-
-                    <option>1 João</option>
-                    <option>2 João</option>
-                    <option>3 João</option>
-
-                    <option>Judas</option>
-                    <option>Apocalipse</option>
-
                 </select>
 
             </div>
 
+
+            <!-- CAPÍTULO -->
 
             <div class="campo">
 
@@ -152,6 +84,8 @@
             </div>
 
 
+            <!-- VERSÍCULO -->
+
             <div class="campo">
 
                 <label for="versiculo">
@@ -169,45 +103,130 @@
             </div>
 
 
-            <button id="btnMostrar">
-                Mostrar versículo
-            </button>
+            <!-- BOTÕES -->
+
+            <div class="grupo-botoes">
+
+                <button id="btnMostrar">
+                    📖 Mostrar versículo
+                </button>
+
+                <button
+                    id="btnCapitulo"
+                    class="btn-secundario">
+
+                    📜 Ler capítulo inteiro
+
+                </button>
+
+            </div>
+
+
+            <!-- NAVEGAÇÃO -->
+
+            <div class="navegacao">
+
+                <button
+                    id="btnAnterior"
+                    class="btn-navegacao">
+
+                    ⬅ Anterior
+
+                </button>
+
+                <button
+                    id="btnProximo"
+                    class="btn-navegacao">
+
+                    Próximo ➡
+
+                </button>
+
+            </div>
+
+
+            <div class="atalhos">
+
+                <strong>⌨️ Atalhos</strong>
+
+                <span>← → capítulos</span>
+
+                <span>↑ ↓ versículos</span>
+
+                <span>Esc sai do telão</span>
+
+            </div>
 
         </section>
 
 
-        <!-- ÁREA DO VERSÍCULO -->
-        <section class="painel-versiculo">
+
+        <!-- =========================
+             ÁREA DA BÍBLIA
+        ========================== -->
+
+        <section
+            class="painel-versiculo"
+            id="painelVersiculo">
+
 
             <div class="icone-biblia">
                 📖
             </div>
 
-            <div class="referencia" id="referencia">
+
+            <div
+                class="referencia"
+                id="referencia">
+
                 Selecione uma passagem
-            </div>
-
-            <div class="texto-versiculo" id="textoVersiculo">
-
-                O versículo selecionado
-                aparecerá aqui.
 
             </div>
 
-            <button
-                class="btn-projetar"
-                id="btnProjetar">
 
-                📺 Projetar no telão
+            <div
+                class="texto-versiculo"
+                id="textoVersiculo">
 
-            </button>
+                O texto aparecerá aqui.
+
+            </div>
+
+
+            <!-- LISTA DO CAPÍTULO -->
+
+            <div
+                class="lista-versiculos"
+                id="listaVersiculos">
+
+            </div>
+
+
+            <!-- CONTROLES -->
+
+            <div class="controles-leitura">
+
+                <button
+                    class="btn-projetar"
+                    id="btnProjetar">
+
+                    📺 Projetar no telão
+
+                </button>
+
+            </div>
+
 
         </section>
 
     </main>
 
 
-    <!-- RODAPÉ -->
+
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
+
     <footer>
 
         Bíblia da Igreja
@@ -217,9 +236,13 @@
     </footer>
 
 
-    <!-- JAVASCRIPT -->
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
     <script src="script.js"></script>
 
 </body>
 
-  </html>
+</html>
