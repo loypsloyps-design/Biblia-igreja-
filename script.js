@@ -28,7 +28,7 @@ async function carregarBiblia() {
 
     try {
 
-        const resposta = await fetch("./biblioteca.json");
+        const resposta = await fetch("biblioteca.json");
 
         if (!resposta.ok) {
             throw new Error(
